@@ -1,0 +1,14 @@
+---
+    import BlogLayout from '../layouts/BlogLayout.astro';
+    ---
+
+    <BlogLayout>
+      <h1>Welcome to my blog!</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.slug}>
+            <a href={post.slug}>{post.title}</a>
+          </li>
+        ))}
+      </ul>
+    </BlogLayout>

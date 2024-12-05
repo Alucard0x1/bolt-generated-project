@@ -1,0 +1,10 @@
+---
+    import { getPost } from '../lib/posts.js';
+    const post = await getPost(import.meta.url);
+    ---
+
+    <BlogLayout>
+      <h1>{post.title}</h1>
+      <p>{post.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    </BlogLayout>
